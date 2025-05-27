@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(Poppins-Medium.ttf);
+}
+.tengah {
+    text-align: center;
+    width: 100%;
+  }
+  
+  section {
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+  }
+  
+  p {
+    margin: 10px 0px 10px 0px;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .kolom {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Poppins";
+    color: #498ad5;
+  }
+  
+  h2 {
+    font-family: "Poppins";
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+  }
+  
+  .tengah {
+    text-align: center;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 991.98px) {
+    section {
+      display: block;
+    }
+  
+    section img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }

@@ -1,0 +1,133 @@
+/* Container Utama */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    background: #ffffff;
+    flex: 1;
+    margin-top: 30px;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+     
+}
+
+/* Konten Dashboard */
+.dashboard-content {
+    flex: 1;
+    
+}
+
+
+/* Live Stream */
+
+.video-container {
+    position: relative;
+    padding-top: 56.25%; /* tinggi lebih kecil */
+    height: 0;
+    width: 100%;
+    max-width: 10000px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+.livestream {
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .video-box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.live-text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.dashboard-widgets {
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Statistik & Pie Chart */
+.widget {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Tabel Pengaduan */
+.table-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+
+
+/* Chart Pelanggaran Helm */
+.chart-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Status Badge */
+.status-option {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+  background-color: #ccc;
+}
+
+.status-belum {
+  background-color: #f0ad4e;
+}
+
+.status-diproses {
+  background-color: #5bc0de;
+}
+
+.status-selesai {
+  background-color: #5cb85c;
+}

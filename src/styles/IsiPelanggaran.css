@@ -1,0 +1,65 @@
+.pelanggaran-container {
+    width: 90%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.judul {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 20px;
+    color: black;
+}
+
+/* Card */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Header Card */
+.card-title {
+    text-align: left;
+    font-size: medium;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* Body Card */
+.card-body {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-body h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Chart Container */
+.chart-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Legend */
+.legend-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.legend-box {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}

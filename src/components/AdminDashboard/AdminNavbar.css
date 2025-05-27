@@ -1,0 +1,47 @@
+.admin-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 20px;
+    border-bottom: 2px solid #e0e0e0;
+    position: fixed;
+    top: 0;
+    left: 240px;
+    width: calc(100% - 240px);
+    color: black;
+    height: 60px;
+  }
+  
+  .admin-navbar-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .navbar-right {
+    margin-right: 80px; /* Tambahkan margin ke kiri */
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  
+  .logout-btn .icon {
+    margin-right: 8px;
+
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+  }
+  

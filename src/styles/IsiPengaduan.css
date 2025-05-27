@@ -1,0 +1,78 @@
+.Pengaduan {
+    width: 80%;
+    margin: auto;
+    
+    
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.title {
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 20px;
+}
+
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-judul {
+    margin-bottom: 20px;
+    background: #cdcdcd;
+  }
+  
+
+  .input-bukti {
+    margin-top: 10px;
+    background: #cdcdcd;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #cdcdcd;
+    margin-top: 10px;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.file-upload {
+    margin-top: 10px;
+}
+
+button {
+    background: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b0b0b0;
+}
+
+.required {
+  color: red;
+  margin-left: 4px;
+}

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(Poppins-Medium.ttf);
+}
+
+.logo a {
+  font-size: 50px;
+  font-weight: 800;
+  float: left;
+  font-family: "Poppins";
+  color: #00b4d8;
+  margin-left: -150px;
+}
+
+.menu {
+  float: right;
+  margin-left: auto;
+  
+
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  padding: 0 100px;
+  display: flex;
+  line-height: 60px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #00b4d8;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 10px;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  line-height: normal;
+}
+
+/* Underline animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #00b4d8;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-50%);
+  
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+

@@ -1,0 +1,84 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background: #1f1f1f;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00b4d8;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  border-radius: 5px;
+  position: relative;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.accordion {
+  justify-content: space-between;
+}
+
+.sidebar-menu li .icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.sidebar-menu li:hover {
+  background: #333;
+}
+
+/* Icon panah */
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon.open {
+  transform: rotate(180deg); /* Mengubah arah panah ke atas */
+}
+
+/* Submenu styling */
+.submenu {
+  list-style: none;
+  padding-left: 25px;
+  margin-top: 5px;
+}
+
+.submenu li {
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.submenu li:hover {
+  color: #bbb;
+}

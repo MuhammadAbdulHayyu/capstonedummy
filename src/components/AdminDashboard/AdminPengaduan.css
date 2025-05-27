@@ -1,0 +1,238 @@
+.admin-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pengaduan-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .pengaduan-table th, .pengaduan-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pengaduan-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .pengaduan-table tr:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    color: darkred;
+  }
+  
+  .detail-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .judul {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .deskripsi {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .foto-aduan {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    border-radius: 5px;
+  }
+  
+  .waktu {
+    text-align: center;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .status-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0;
+  }
+  
+  .status-container label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .status-container input {
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  
+  .pengaduan-table th label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+  }
+  
+  .filter-checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 5px;
+    color: #000; /* Pastikan teks hitam */
+  }
+  
+  .filter-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .filter-checkboxes input {
+    cursor: pointer;
+  }
+
+  .status-filter {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 10px 0 20px;
+  }
+  
+  .status-filter label {
+    color: black;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .status-filter input[type="radio"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .status-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0;
+  }
+  
+  .status-option {
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: #e0e0e0;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+
+  .pengaduan-table td, .pengaduan-table th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  
+ .status-belum {
+  background-color: #f0ad4e;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.status-diproses {
+  background-color: #5bc0de;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.status-selesai {
+  background-color: #5cb85c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.tanggal-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  height: 38px; 
+}
+
+.filter-group select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #000000;
+  font-size: 14px;
+}
+
+
+
+
+  
