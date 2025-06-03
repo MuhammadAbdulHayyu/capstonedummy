@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { FaDownload, FaCalendarAlt } from "react-icons/fa";
@@ -17,14 +17,34 @@ const fetchImageAsBlob = async (url) => {
   return await response.blob();
 };
 
+const FotoCard = React.memo(({ url, name, tanggal, onDownload }) => (
+  <div className="foto-card">
+    <div className="foto-wrapper">
+      <img
+        src={url}
+        alt={name}
+        className="foto-preview"
+        loading="lazy"
+      />
+    </div>
+    <div className="foto-info">
+      <p>{tanggal}</p>
+      <button onClick={() => onDownload(url, name)} className="download-btn">
+        <FaDownload className="icon" />
+        Download
+      </button>
+    </div>
+  </div>
+));
+
 const Foto = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [fotoList, setFotoList] = useState([]);
+  const [fotoList, setFotoList] = useState([]); // Array of { name, url, tanggal }
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [isDownloading, setIsDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const downloadCancelled = useRef(false);
+  const downloadCancelled = React.useRef(false);
 
   const itemsPerPage = 10;
 
@@ -51,7 +71,7 @@ const Foto = () => {
           item.name.includes(formattedDate)
         );
 
-        const urls = await Promise.all(
+        const mapped = await Promise.all(
           matchedItems.map(async (item) => {
             const url = await getDownloadURL(item);
             return {
@@ -62,7 +82,7 @@ const Foto = () => {
           })
         );
 
-        setFotoList(urls);
+        setFotoList(mapped);
       } catch (error) {
         console.error("Gagal memuat foto:", error);
         setFotoList([]);
@@ -97,7 +117,6 @@ const Foto = () => {
         }
 
         const item = fotoList[i];
-
         try {
           const blob = await fetchImageAsBlob(item.url);
           zip.file(item.name, blob);
@@ -149,27 +168,22 @@ const Foto = () => {
       </div>
 
       <section className="content">
-  {loading ? (
-    <p>Memuat data foto...</p>
-  ) : currentItems.length > 0 ? (
-    currentItems.map((item, index) => (
-      <div className="foto-card" key={index}>
-        <div className="foto-wrapper">
-        <img src={item.url} alt={item.name} className="foto-preview" />
-        </div>
-        <div className="foto-info">
-          <p>{item.tanggal}</p>
-          <button onClick={() => downloadImage(item.url, item.name)} className="download-btn">
-            <FaDownload className="icon" />
-            Download
-          </button>
-        </div>
-      </div>
-    ))
-  ) : (
-    <p className="no-data">Tidak ada foto pada tanggal ini</p>
-  )}
-</section>
+        {loading ? (
+          <p>Memuat data foto...</p>
+        ) : currentItems.length > 0 ? (
+          currentItems.map((item) => (
+            <FotoCard
+              key={item.name}
+              url={item.url}
+              name={item.name}
+              tanggal={item.tanggal}
+              onDownload={downloadImage}
+            />
+          ))
+        ) : (
+          <p className="no-data">Tidak ada foto pada tanggal ini</p>
+        )}
+      </section>
 
       {fotoList.length > itemsPerPage && (
         <div className="pagination">
@@ -195,7 +209,9 @@ const Foto = () => {
         <div className="download-progress">
           <p>Downloading... {progress}%</p>
           <progress value={progress} max="100" />
-          <button onClick={cancelDownload} className="cancel-btn">Cancel</button>
+          <button onClick={cancelDownload} className="cancel-btn">
+            Cancel
+          </button>
         </div>
       )}
     </div>
